@@ -1,11 +1,18 @@
-import { useState } from "react";
 import Header from "./components/Header";
+import SearchBox from "./components/SearchBox";
 
 function App() {
+  const handleSearch = (searchTerm) => {
+    console.log("Searching for:", searchTerm);
+  };
+
   return (
-    <main className="main-container">
+    <>
       <Header />
-    </main>
+      <main className="p-4">
+        <SearchBox onSearch={handleSearch} />
+      </main>
+    </>
   );
 }
 
