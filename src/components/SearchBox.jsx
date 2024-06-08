@@ -3,8 +3,8 @@ import React, { useState } from "react";
 const SearchBox = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const handleSearch = (event) => {
-    event.preventDefault();
+  const handleSearch = (e) => {
+    e.preventDefault();
     if (!searchTerm) return;
     onSearch(searchTerm);
   };
