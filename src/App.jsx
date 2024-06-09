@@ -13,7 +13,7 @@ function App() {
     if (!searchTerm) return;
     setPage(1);
     setImages([]);
-    fetchImages(searchTerm, 1)
+    fetchImages(searchTerm)
       .then((data) => setImages(data.results))
       .catch((err) => console.log(err));
   }, [searchTerm]);
