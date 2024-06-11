@@ -11,6 +11,65 @@ body {
   /* background-position: center; */
 }
 
+.image-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.image-container .image {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container:hover .image {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black background */
+  opacity: 0; /* Initially hidden */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 10px; /* Add some padding */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+  transition: opacity 0.3s ease;
+}
+
+.title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.download-btn {
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.download-btn:hover {
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.image-container:hover .overlay {
+  opacity: 1; /* Show the overlay on hover */
+}
+
 /* Default background image styling with grayscale and some opacity
 .main-container {
   position: relative;
