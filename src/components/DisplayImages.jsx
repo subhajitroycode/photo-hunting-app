@@ -35,7 +35,7 @@ const DisplayImages = ({ images }) => {
               className="block w-full h-auto image"
             />
             <div className="absolute top-0 left-0 w-full h-full opacity-0 flex justify-between items-end p-[10px] box-border overlay">
-              <p className="text-white text-lg font-roboto italic p-2 capitalize">
+              <p className="text-white text-sm font-roboto italic p-2 capitalize">
                 {image.alt_description}
               </p>
               <button

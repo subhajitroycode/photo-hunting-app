@@ -43,6 +43,19 @@ body {
   opacity: 1; /* Show the overlay on hover */
 }
 
+.top-button--icon {
+  animation: gototop 1.2s linear infinite alternate-reverse;
+}
+
+@keyframes gototop {
+  0% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    transform: translateY(0.8rem);
+  }
+}
+
 /* Default background image styling with grayscale and some opacity
 .main-container {
   position: relative;
