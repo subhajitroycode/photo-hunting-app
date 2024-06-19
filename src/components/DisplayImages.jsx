@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { MdOutlineFileDownload } from "react-icons/md";
 
 const DisplayImages = ({ images }) => {
@@ -20,6 +20,10 @@ const DisplayImages = ({ images }) => {
       console.error("Failed to download image", error);
     }
   };
+
+  useEffect(() => {
+    document.body.style.backgroundSize = "auto";
+  }, []);
 
   return (
     <>

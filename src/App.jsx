@@ -5,7 +5,7 @@ import DisplayImages from "./components/DisplayImages";
 import fetchImages from "./utils/fetchImage";
 import { TailSpin } from "react-loader-spinner";
 import ToTopButton from "./components/ToTopButton";
-import DarkMode from "./components/DarkMode";
+import DarkModeToggle from "./components/DarkModeToggle";
 
 function App() {
   const [images, setImages] = useState([]);
@@ -36,7 +36,7 @@ function App() {
   return (
     <>
       <Header />
-      <DarkMode />
+      <DarkModeToggle />
       <main className="p-4">
         <SearchBox onSearch={(searchItem) => setSearchTerm(searchItem)} />
         {loading && (

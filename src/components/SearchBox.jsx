@@ -13,7 +13,7 @@ const SearchBox = ({ onSearch }) => {
 
   return (
     <form
-      className="flex justify-center items-center my-4 relative w-full max-w-lg mx-auto border border-gray-300 bg-zinc-100 hover:bg-zinc-200 rounded-lg pl-2"
+      className="flex justify-center items-center my-4 relative w-full max-w-lg mx-auto border border-gray-300 bg-zinc-100 hover:bg-zinc-200 rounded-lg pl-2 form-container"
       onSubmit={handleSearch}
     >
       <GoSearch size={24} className="text-gray-500 mr-2" />
