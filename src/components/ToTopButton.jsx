@@ -30,7 +30,7 @@ const ToTopButton = () => {
       {isVisible && (
         <button
           onClick={topBtn}
-          className="text-2xl w-16 h-16 text-black bg-gray-300/60 rounded-[50%] fixed bottom-20 right-20 z-10 flex justify-center items-center cursor-pointer"
+          className="text-2xl w-16 h-16 bg-gray-300/60 rounded-[50%] fixed bottom-20 right-8 sm:right-20 z-10 flex justify-center items-center cursor-pointer"
         >
           <FaArrowUp className="top-button--icon" />
         </button>

@@ -58,7 +58,8 @@ function App() {
             <DisplayImages images={images} />
             <div className="flex justify-center mx-6">
               <button
-                className="text-gray-400 text-base rounded-lg py-4 w-full border-2 border-orange-400 hover:border-orange-500 hover:bg-orange-500 hover:text-white"
+                className="text-gray-500 text-base bg-gray-100 dark:bg-gray-700 rounded-lg py-4 w-full border-2 border-orange-400 hover:border-orange-500 hover:bg-orange-500 hover:text-white load-btn"
+                id="load-btn"
                 onClick={() => setPage(page + 1)}
               >
                 Load more...
