@@ -1,7 +1,16 @@
 import React, { useEffect } from "react";
+import Masonry from "react-masonry-css";
 import { MdOutlineFileDownload } from "react-icons/md";
 
 const DisplayImages = ({ images }) => {
+  console.log(images);
+  const breakpointColumnsObj = {
+    default: 4,
+    1540: 3,
+    700: 2,
+    500: 1,
+  };
+
   const downloadImage = async (url, filename) => {
     try {
       const response = await fetch(url);
@@ -26,17 +35,21 @@ const DisplayImages = ({ images }) => {
   }, []);
 
   return (
-    <>
-      <div className="columns-1 md:columns-2 lg:columns-3 gap-4 m-6">
+    <section className="mx-6 my-10">
+      <Masonry
+        breakpointCols={breakpointColumnsObj}
+        className="flex ml-[-30px] w-auto"
+        columnClassName="pl-[30px] bg-clip-padding"
+      >
         {images.map((image) => (
           <div
-            className="w-full mb-4 relative inline-block overflow-hidden rounded-lg image-container"
+            className="w-full relative inline-block overflow-hidden rounded-lg mb-[30px] image-container"
             key={image.id}
           >
             <img
               src={image.urls.regular}
-              alt=""
-              className="block w-full h-auto image"
+              alt={image.alt_description}
+              className="w-full block rounded-lg"
             />
             <div className="absolute top-0 left-0 w-full h-full opacity-0 flex justify-between items-end p-[10px] box-border overlay">
               <p className="text-white text-sm font-roboto italic p-2 capitalize">
@@ -56,8 +69,8 @@ const DisplayImages = ({ images }) => {
             </div>
           </div>
         ))}
-      </div>
-    </>
+      </Masonry>
+    </section>
   );
 };
 
