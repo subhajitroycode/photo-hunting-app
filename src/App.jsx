@@ -1,7 +1,4 @@
 import { useEffect, useState } from "react";
-// import Header from "./components/Header";
-// import SearchBox from "./components/SearchBox";
-// import DisplayImages from "./components/DisplayImages";
 import {
   DarkModeToggle,
   DisplayImages,
@@ -11,8 +8,6 @@ import {
 } from "./components";
 import fetchImages from "./utils/fetchImage";
 import { TailSpin } from "react-loader-spinner";
-// import ToTopButton from "./components/ToTopButton";
-// import DarkModeToggle from "./components/DarkModeToggle";
 
 function App() {
   const [images, setImages] = useState([]);
