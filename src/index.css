@@ -125,3 +125,10 @@ input:checked + .slider:after {
     color: #fff;
   }
 }
+
+@media (max-width: 576px) {
+  .overlay {
+    opacity: 1;
+    background-color: transparent;
+  }
+}
