@@ -52,16 +52,20 @@ const DisplayImages = ({ images }) => {
               className="w-full block rounded-lg"
             />
             <div className="absolute top-0 left-0 w-full h-full opacity-0 flex justify-between items-end p-[10px] box-border overlay">
-              <p className="text-white text-sm font-roboto italic p-2 capitalize">
-                {image.alt_description}
-              </p>
+              <div className="flex justify-center items-center gap-2 p-2 text-white">
+                <img
+                  src={image.user.profile_image.small}
+                  alt="profile image of creator"
+                  className="border-2 border-orange-500 rounded-full"
+                />
+                <p>
+                  {image.user.first_name} {image.user.last_name}
+                </p>
+              </div>
               <button
                 className="download-btn"
                 onClick={() =>
-                  downloadImage(
-                    image.urls.regular,
-                    `${image.alt_description}.png`
-                  )
+                  downloadImage(image.urls.raw, `${image.alt_description}.png`)
                 }
               >
                 <MdOutlineFileDownload size={24} />
