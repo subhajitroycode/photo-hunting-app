@@ -9,6 +9,7 @@ The Photo Hunting App is a modern and user-friendly application that allows you 
 - **Dark Mode**: Enhance your viewing experience by enabling the dark mode feature, which provides a more comfortable and eye-friendly interface.
 - **Infinite Scrolling**: Load more images seamlessly as you scroll down, ensuring a smooth and uninterrupted browsing experience.
 - **Responsive Design**: The app is optimized for various screen sizes, ensuring a consistent and enjoyable experience across different devices.
+- **Download Image**: Users can download their favorite images with just a click, allowing them to save and use the images locally.
 
 ## Technologies Used
 
